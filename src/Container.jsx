@@ -1,8 +1,10 @@
 import React from 'react';
 import './Container.css';
 import { Row, Col } from 'react-bootstrap';
-import Pokemon from './Pokemon.jsx';
 import pokemons from './pokemons.json';
+import Header from './Components/Header/Header';
+import Pokemon from './Components/Card/Pokemon';
+import SearchBar from './Components/SearchBar/SearchBar';
 class Container extends React.Component {
 	state = {
 		searchItem: ''
@@ -14,12 +16,10 @@ class Container extends React.Component {
 		if (this.state.searchItem !== '') {
 			return (
 				<div>
-					<div className="search">
-						<h4>POKEMONPEDIA</h4>
-						<input onChange={this.handleSearch} type="text" placeholder="Search your favourite pokemon" />
-					</div>
+					<Header />
+					<SearchBar />
 					<Row>
-						{pokemons.filter((item) => item.name.includes(this.state.searchItem) ).map((item) => (
+						{pokemons.filter((item) => item.name.includes(this.state.searchItem)).map((item) => (
 							<Col lg={2}>
 								<Pokemon details={item} />
 							</Col>
