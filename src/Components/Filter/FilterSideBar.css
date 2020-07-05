@@ -1,0 +1,17 @@
+.side-bar {
+    width: 100%;
+    background-color: white;
+    height: 50vh;
+    padding: 30px;
+}
+.side-bar-form {
+    margin: 30px;
+}
+.side-bar-form label {
+    display: inline;
+}
+.side-bar-form input {
+    width: 1rem;
+    height: auto;
+    margin: 0;
+}

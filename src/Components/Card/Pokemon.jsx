@@ -11,7 +11,6 @@ const Pokemon = (props) => {
 					<Card.Img variant="top" src={about.image} />
 					<Card.Body>
 						<Card.Title>{about.name}</Card.Title>
-
 						{Object.entries(about['base']).map((item) => <p>{`${item[0]}:${item[1]}`}</p>)}
 					</Card.Body>
 				</Card>
